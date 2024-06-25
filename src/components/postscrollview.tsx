@@ -13,66 +13,11 @@ import {
 } from "@/components/ui/table";
 import { Card, CardTitle } from "./ui/card";
 import Link from "next/link";
+import { getPosts } from "@/actions/actions";
 
-const PostScrollView = () => {
-  const posts = [
-    {
-      title: "First Post",
-      date: new Date().toDateString(),
-    },
-    {
-      title: "First Post",
-      date: new Date().toDateString(),
-    },
-    {
-      title: "First Post",
-      date: new Date().toDateString(),
-    },
-    {
-      title: "First Post",
-      date: new Date().toDateString(),
-    },
-    {
-      title: "First Post",
-      date: new Date().toDateString(),
-    },
-    {
-      title: "First Post",
-      date: new Date().toDateString(),
-    },
-    {
-      title: "First Post",
-      date: new Date().toDateString(),
-    },
-    {
-      title: "First Post",
-      date: new Date().toDateString(),
-    },
-    {
-      title: "First Post",
-      date: new Date().toDateString(),
-    },
-    {
-      title: "First Post",
-      date: new Date().toDateString(),
-    },
-    {
-      title: "First Post",
-      date: new Date().toDateString(),
-    },
-    {
-      title: "First Post",
-      date: new Date().toDateString(),
-    },
-    {
-      title: "First Post",
-      date: new Date().toDateString(),
-    },
-    {
-      title: "First Post",
-      date: new Date().toDateString(),
-    },
-  ];
+const PostScrollView = async () => {
+  const newPosts = await getPosts();
+
   return (
     <Card className="p-4 m-0 border-none w-full h-full flex flex-col">
       <CardTitle className="pb-4">Blog Posts</CardTitle>
@@ -85,16 +30,16 @@ const PostScrollView = () => {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {posts.map((post, index) => (
+            {newPosts.map((post, index) => (
               <Link
                 legacyBehavior
                 key={index}
-                href="/posts"
+                href={`/post/${post.id}`}
                 className="hover:cursor-pointer"
               >
                 <TableRow className="cursor-pointer">
                   <TableCell className="font-medium">{post.title}</TableCell>
-                  <TableCell>{post.date}</TableCell>
+                  <TableCell>{post.createdAt.toDateString()}</TableCell>
                 </TableRow>
               </Link>
             ))}
