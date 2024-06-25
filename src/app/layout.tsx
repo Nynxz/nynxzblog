@@ -6,7 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import NavBar from "@/components/navbar";
 import { TooltipProvider } from "@radix-ui/react-tooltip";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-
+import { Analytics } from "@vercel/analytics/react";
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -42,6 +42,7 @@ export default function RootLayout({
             </header>
             <main className="flex flex-row flex-grow h-screen">
               {children}
+              <Analytics />
               <SpeedInsights />
             </main>
           </TooltipProvider>
