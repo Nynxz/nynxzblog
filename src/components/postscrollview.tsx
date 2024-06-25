@@ -25,8 +25,8 @@ const PostScrollView = async () => {
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead className="w-[100px]">Title</TableHead>
-              <TableHead>Date</TableHead>
+              <TableHead className="">Title</TableHead>
+              <TableHead className="">Date</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
