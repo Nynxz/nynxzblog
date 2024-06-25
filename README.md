@@ -1,6 +1,6 @@
 This is my personal blog site built with [Next.js](https://nextjs.org/).
 
-It will be hosted over at [blog.nynxz.com](https://blog.nynxz.com)
+It will be hosted over at [blog.nynxz.com](https://www.nynxz.com)
 
 
 ## Hosting your own
