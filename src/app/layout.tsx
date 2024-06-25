@@ -12,8 +12,8 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "Nynxz Blog",
-  description: "Nynxz's Blog!",
+  title: "Henry Lee",
+  description: "Henry Lee's Portfolio and Blog",
 };
 
 export default function RootLayout({
