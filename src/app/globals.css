@@ -4,6 +4,18 @@
 button {
   --tw-ring-shadow: 0 0 #000 !important;
 }
+
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+  h3 {
+    @apply text-lg;
+  }
+}
 @layer base {
   :root {
     --background: 0 0% 100%;
