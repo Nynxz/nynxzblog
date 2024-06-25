@@ -16,7 +16,6 @@ const NavBar = () => {
           </li>
         </ul>
         <div className="m-w-0 flex flex-row items-center gap-4">
-          <h2>Create Post</h2>
           <ThemeToggle />
         </div>
       </nav>
