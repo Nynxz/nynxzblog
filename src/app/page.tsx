@@ -1,6 +1,7 @@
 import AboutMe from "@/components/aboutme";
 import PostScrollView from "@/components/postscrollview";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+export const dynamic = "force-dynamic";
 
 export default function HomePage() {
   return (
